@@ -1,26 +1,23 @@
 import React, { useState } from 'react';
-import Layout from './components/layout/Layout';
-import BootScreen from './components/sections/BootScreen';
+import {Layout} from './components/layout/Layout';
+import {BootScreen} from './components/sections/BootScreen';
 import HomeSection from './components/sections/HomeSection';
-import SkillsSection from './components/sections/SkillsSection';
-import ProjectsSection from './components/sections/ProjectsSection';
-import AchievementsSection from './components/sections/AchievementsSection';
-import ContactSection from './components/sections/ContactSection';
-import CustomCursor from './components/common/CustomCursor';
-import MatrixBackground from './components/common/MatrixBackground';
-import ScanlinesOverlay from './components/common/ScanlinesOverlay';
+import { SkillsSection } from './components/sections/SkillsSection';
+import {ProjectsSection} from './components/sections/ProjectsSection';
+import {AchievementsSection} from './components/sections/AchievementsSection';
+import {ContactSection} from './components/sections/ContactSection';
 
 const App = () => {
   const [currentSection, setCurrentSection] = useState('boot');
   const [bootComplete, setBootComplete] = useState(false);
 
+  const handleBootComplete = () => {
+    setBootComplete(true);
+    setCurrentSection('home');
+  };
+
   const renderSection = () => {
     switch (currentSection) {
-      case 'boot':
-        return <BootScreen onBootComplete={() => {
-          setBootComplete(true);
-          setCurrentSection('home');
-        }} />;
       case 'home':
         return <HomeSection />;
       case 'skills':
@@ -36,28 +33,19 @@ const App = () => {
     }
   };
 
+  // Show boot screen with its own background and cursor
   if (currentSection === 'boot') {
-    return (
-      <div className="min-h-screen bg-black relative overflow-hidden cursor-none">
-        <CustomCursor />
-        <MatrixBackground />
-        <BootScreen onBootComplete={() => {
-          setBootComplete(true);
-          setCurrentSection('home');
-        }} />
-      </div>
-    );
+    return <BootScreen onBootComplete={handleBootComplete} />;
   }
 
+  // Show main app with layout and navigation
   return (
-    <div className="min-h-screen bg-black text-white relative overflow-hidden cursor-none">
-      <CustomCursor />
-      <MatrixBackground />
-      <ScanlinesOverlay />
-      <Layout currentSection={currentSection} setCurrentSection={setCurrentSection}>
-        {renderSection()}
-      </Layout>
-    </div>
+    <Layout 
+      currentSection={currentSection} 
+      onSectionChange={setCurrentSection}
+    >
+      {renderSection()}
+    </Layout>
   );
 };
 

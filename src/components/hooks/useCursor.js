@@ -1,3 +1,4 @@
+// File: src/components/hooks/useCursor.js
 import { useState, useEffect } from 'react';
 
 const useCursor = () => {
@@ -5,38 +6,38 @@ const useCursor = () => {
   const [isHovering, setIsHovering] = useState(false);
 
   useEffect(() => {
-    let animationFrame;
-    
     const handleMouseMove = (e) => {
-      if (animationFrame) {
-        cancelAnimationFrame(animationFrame);
-      }
-      
-      animationFrame = requestAnimationFrame(() => {
-        setCursorPos({ x: e.clientX, y: e.clientY });
-      });
+      setCursorPos({ x: e.clientX, y: e.clientY });
     };
 
-    const handleMouseEnter = () => setIsHovering(true);
-    const handleMouseLeave = () => setIsHovering(false);
+    const handleMouseEnter = (e) => {
+      if (e.target.tagName === 'BUTTON' || 
+          e.target.tagName === 'A' || 
+          e.target.classList.contains('hoverable') ||
+          e.target.closest('button') ||
+          e.target.closest('a')) {
+        setIsHovering(true);
+      }
+    };
 
-    document.addEventListener('mousemove', handleMouseMove, { passive: true });
-    
-    const interactiveElements = document.querySelectorAll('button, a, [role="button"], input, textarea');
-    interactiveElements.forEach(el => {
-      el.addEventListener('mouseenter', handleMouseEnter, { passive: true });
-      el.addEventListener('mouseleave', handleMouseLeave, { passive: true });
-    });
+    const handleMouseLeave = (e) => {
+      if (e.target.tagName === 'BUTTON' || 
+          e.target.tagName === 'A' || 
+          e.target.classList.contains('hoverable') ||
+          e.target.closest('button') ||
+          e.target.closest('a')) {
+        setIsHovering(false);
+      }
+    };
+
+    document.addEventListener('mousemove', handleMouseMove);
+    document.addEventListener('mouseenter', handleMouseEnter, true);
+    document.addEventListener('mouseleave', handleMouseLeave, true);
 
     return () => {
-      if (animationFrame) {
-        cancelAnimationFrame(animationFrame);
-      }
       document.removeEventListener('mousemove', handleMouseMove);
-      interactiveElements.forEach(el => {
-        el.removeEventListener('mouseenter', handleMouseEnter);
-        el.removeEventListener('mouseleave', handleMouseLeave);
-      });
+      document.removeEventListener('mouseenter', handleMouseEnter, true);
+      document.removeEventListener('mouseleave', handleMouseLeave, true);
     };
   }, []);
 

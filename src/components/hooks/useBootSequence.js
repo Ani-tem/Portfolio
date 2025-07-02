@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react';
+// File: src/components/hooks/useBootSequence.js
+import { useState, useEffect, useCallback } from 'react';
 
 export const useBootSequence = (onBootComplete) => {
   const [terminalText, setTerminalText] = useState('');
@@ -10,40 +11,59 @@ export const useBootSequence = (onBootComplete) => {
     'Initializing neural networks...',
     'Connecting to database...',
     'Loading portfolio modules...',
+    'Analyzing skill matrices...',
+    'Calibrating creative algorithms...',
     'SYSTEM READY',
     'Welcome to Anirudh\'s Digital Domain'
   ];
 
+  const memoizedOnBootComplete = useCallback(onBootComplete, [onBootComplete]);
+
   useEffect(() => {
     let i = 0;
     let currentLine = 0;
+    let isMounted = true;
+
     const typeInterval = setInterval(() => {
+      if (!isMounted) return;
+
       if (currentLine < bootSequence.length) {
         if (i <= bootSequence[currentLine].length) {
-          setTerminalText(bootSequence.slice(0, currentLine).join('\n') + 
-                         (currentLine > 0 ? '\n' : '') + 
-                         bootSequence[currentLine].substring(0, i));
+          const currentText = bootSequence.slice(0, currentLine).join('\n') + 
+                             (currentLine > 0 ? '\n' : '') + 
+                             bootSequence[currentLine].substring(0, i);
+          setTerminalText(currentText);
           i++;
         } else {
           currentLine++;
           i = 0;
           if (currentLine === bootSequence.length) {
             setTimeout(() => {
-              setBootComplete(true);
-              if (onBootComplete) onBootComplete();
-            }, 1000);
+              if (isMounted) {
+                setBootComplete(true);
+                if (memoizedOnBootComplete) {
+                  memoizedOnBootComplete();
+                }
+              }
+            }, 1500);
           }
         }
+      } else {
+        clearInterval(typeInterval);
       }
-    }, 50);
+    }, 80);
 
-    return () => clearInterval(typeInterval);
-  }, [onBootComplete]);
+    return () => {
+      isMounted = false;
+      clearInterval(typeInterval);
+    };
+  }, [memoizedOnBootComplete]);
 
   useEffect(() => {
     const cursorInterval = setInterval(() => {
       setShowCursor(prev => !prev);
-    }, 500);
+    }, 600);
+    
     return () => clearInterval(cursorInterval);
   }, []);
 

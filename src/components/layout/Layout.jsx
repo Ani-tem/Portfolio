@@ -1,9 +1,9 @@
 import React from 'react';
-import { Navigation } from './Navigation';
-import { Footer } from './Footer';
-import { MatrixBackground } from '../common/MatrixBackground';
+import Navigation from './Navigation';
+import Footer from './Footer';
+import MatrixBackground from '../common/MatrixBackground';
 import { ScanlinesOverlay } from '../common/ScanlinesOverlay';
-import { CustomCursor } from '../common/CustomCursor';
+import CustomCursor from '../common/CustomCursor';
 
 export const Layout = ({ children, currentSection, onSectionChange }) => {
   return (
@@ -14,7 +14,7 @@ export const Layout = ({ children, currentSection, onSectionChange }) => {
       
       <Navigation 
         currentSection={currentSection} 
-        onSectionChange={onSectionChange} 
+        setCurrentSection={onSectionChange} 
       />
       
       <div className="pt-20 px-4 relative z-10">

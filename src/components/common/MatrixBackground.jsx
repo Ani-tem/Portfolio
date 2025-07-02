@@ -8,7 +8,7 @@ const MatrixBackground = ({ isBootScreen = false }) => {
   const opacity = isBootScreen ? 'text-green-400/30' : 'text-green-400/10';
 
   return (
-    <div className={`${isBootScreen ? 'absolute' : 'fixed'} inset-0 pointer-events-none`}>
+    <div className={`${isBootScreen ? 'absolute' : 'fixed'} inset-0 pointer-events-none z-0`}>
       {matrixChars.slice(0, charCount).map((char, index) => (
         <div
           key={index}
@@ -23,7 +23,7 @@ const MatrixBackground = ({ isBootScreen = false }) => {
         </div>
       ))}
       {isBootScreen && (
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-green-400/10 to-transparent animate-pulse"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-green-400/5 to-transparent animate-pulse"></div>
       )}
     </div>
   );

@@ -1,6 +1,6 @@
 import React from 'react';
-import { MatrixBackground } from '../common/MatrixBackground';
-import { CustomCursor } from '../common/CustomCursor';
+import MatrixBackground from '../common/MatrixBackground';
+import CustomCursor from '../common/CustomCursor';
 import { useBootSequence } from '../hooks/useBootSequence';
 
 export const BootScreen = ({ onBootComplete }) => {
@@ -9,7 +9,7 @@ export const BootScreen = ({ onBootComplete }) => {
   return (
     <div className="min-h-screen bg-black flex items-center justify-center relative overflow-hidden cursor-none">
       <CustomCursor />
-      <MatrixBackground density={50} />
+      <MatrixBackground isBootScreen={true} />
       
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-green-400/10 to-transparent animate-pulse"></div>
       
