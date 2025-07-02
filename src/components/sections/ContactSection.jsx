@@ -12,15 +12,15 @@ export const ContactSection = () => {
     },
     {
       icon: Github,
-      text: 'github.com/Ani-tem',
+      text: 'github.com/Anirudh',
       color: 'text-green-400 border-green-400 hover:bg-green-400/10',
-      href: 'https://github.com/Ani-tem'
+      href: 'https://github.com'
     },
     {
       icon: Linkedin,
-      text: 'linkedin.com/in/anirudh-temmanaboyina',
+      text: 'Linkedin',
       color: 'text-green-400 border-green-400 hover:bg-green-400/10',
-      href: 'https://linkedin.com/in/anirudh-temmanaboyina'
+      href: 'https://www.linkedin.com/in/anirudhvvbt/'
     },
     {
       icon: Terminal,

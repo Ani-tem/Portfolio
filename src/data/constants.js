@@ -45,23 +45,23 @@ export const SECTIONS = {
   export const CODING_PROFILES = [
     {
       platform: 'LeetCode Problems',
-      value: '700+',
-      badge: 'KNIGHT BADGE',
-      detail: 'Global Rank: 261 (Contest 454)',
+      value: 'KNIGHT BADGE',
+      badge: '800+ Problem',
+      detail: 'Global Rank: 261 ',
       color: 'green'
     },
     {
       platform: 'Codeforces Rating',
       value: 'SPECIALIST',
       badge: 'CONSISTENT SOLVER',
-      detail: 'Best Rank: 992 (Div-3)',
+      detail: 'Best Rank: 992 ',
       color: 'cyan'
     },
     {
       platform: 'CodeChef Rating',
       value: '4⭐',
       badge: 'HARD PROBLEMS',
-      detail: 'Best Rank: 508 (Starters 128)',
+      detail: 'Best Rank: 508 ',
       color: 'yellow'
     }
   ];

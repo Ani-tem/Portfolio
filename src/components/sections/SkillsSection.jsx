@@ -33,9 +33,9 @@ export const SkillsSection = () => {
         <h3 className="text-cyan-400 font-mono font-bold mb-4">CODING_PROFILES.LOG</h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="text-center p-4 border border-green-400 hover:bg-green-400/10 transition-colors">
-            <div className="text-2xl font-mono font-bold text-green-400 mb-2">700+</div>
+            <div className="text-2xl font-mono font-bold text-green-400 mb-2">KNIGHT BADGE</div>
             <div className="text-sm text-gray-300 mb-1">LeetCode Problems</div>
-            <div className="text-xs text-green-400 font-mono">KNIGHT BADGE</div>
+            <div className="text-xs text-green-400 font-mono">800+ Problems</div>
             <div className="text-xs text-gray-400 mt-1">Global Rank: 261 (Contest 454)</div>
           </div>
           <div className="text-center p-4 border border-cyan-400 hover:bg-cyan-400/10 transition-colors">
