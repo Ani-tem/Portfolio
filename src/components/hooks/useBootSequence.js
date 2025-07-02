@@ -7,12 +7,8 @@ export const useBootSequence = (onBootComplete) => {
   const [bootComplete, setBootComplete] = useState(false);
 
   const bootSequence = [
-    'Loading student profile...',
-    'Initializing neural networks...',
     'Connecting to database...',
     'Loading portfolio modules...',
-    'Analyzing skill matrices...',
-    'Calibrating creative algorithms...',
     'SYSTEM READY',
     'Welcome to Anirudh\'s Digital Domain'
   ];
