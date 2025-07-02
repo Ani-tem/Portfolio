@@ -19,7 +19,7 @@ const App = () => {
   const renderSection = () => {
     switch (currentSection) {
       case 'home':
-        return <HomeSection />;
+        return <HomeSection onSectionChange={setCurrentSection} />;
       case 'skills':
         return <SkillsSection />;
       case 'projects':
@@ -29,7 +29,7 @@ const App = () => {
       case 'contact':
         return <ContactSection />;
       default:
-        return <HomeSection />;
+        return <HomeSection onSectionChange={setCurrentSection} />;
     }
   };
 

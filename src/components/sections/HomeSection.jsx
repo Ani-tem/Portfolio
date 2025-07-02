@@ -1,7 +1,7 @@
 import React from 'react';
 import { Monitor } from 'lucide-react';
 
-const HomeSection = () => {
+const HomeSection = ({ onSectionChange }) => {
   return (
     <section className="max-w-6xl mx-auto">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center min-h-[80vh]">
@@ -40,7 +40,10 @@ const HomeSection = () => {
           </div>
 
           <div className="flex space-x-4">
-            <button className="bg-green-400 text-black px-6 py-3 font-mono font-bold hover:bg-cyan-400 transition-colors transform hover:scale-105">
+            <button 
+              onClick={() => onSectionChange('projects')}
+              className="bg-green-400 text-black px-6 py-3 font-mono font-bold hover:bg-cyan-400 transition-colors transform hover:scale-105"
+            >
               VIEW_PROJECTS
             </button>
             <button className="border-2 border-green-400 text-green-400 px-6 py-3 font-mono font-bold hover:bg-green-400 hover:text-black transition-all transform hover:scale-105">
