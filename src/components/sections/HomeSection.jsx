@@ -14,7 +14,7 @@ const HomeSection = () => {
               > TEMMANABOYINA.EXE
             </h2>
             <p className="text-lg text-gray-300 font-mono">
-              Indian Institute of Information Technology Allahabad | CGPA: 7.91
+              Indian Institute of Information Technology Allahabad | CGPA: 8.06
             </p>
           </div>
           

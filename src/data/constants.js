@@ -27,7 +27,7 @@ export const SECTIONS = {
     surname: 'TEMMANABOYINA',
     title: '> TEMMANABOYINA.EXE',
     institution: 'Indian Institute of Information Technology Allahabad',
-    cgpa: '7.91',
+    cgpa: '8.06',
     description: 'Competitive programmer and full-stack developer with expertise in system design and algorithms. Top 1% in JEE Mains 2022, solving 1200+ coding problems across platforms.'
   };
   
