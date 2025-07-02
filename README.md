@@ -35,7 +35,7 @@ Portfolio/
 
 - **Frontend**: React, Tailwind CSS, Vite
 - **Icons**: Lucide React
-- **Deployment**: GitHub Pages / Vercel / Netlify (your choice)
+- **Deployment**: Vercel
 
 ## 📦 Getting Started
 
