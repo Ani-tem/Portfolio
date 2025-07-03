@@ -90,7 +90,7 @@ export const projects = [
       status: 'ONGOING',
       year: '2022-',
       link: {
-        leetcode: 'https://leetcode.com/Ani-em',
+        leetcode: 'https://leetcode.com/Ani-Temma',
         codeforces: 'https://codeforces.com/profile/ani-tem'
       }
     }
