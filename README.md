@@ -1,8 +1,8 @@
-# 🚀 Portfolio Website
+#  Portfolio Website
 
 This is a personal portfolio website built using **React**, **Vite**, and **Tailwind CSS**. It showcases my projects, education, skills, and contact information. The site is fully responsive and designed for modern browsers.
 
-## 🌐 Live Demo
+##  Live Demo
 
 [Visit Portfolio] ([Anirudh.com](https://portfolio-git-main-ani-tems-projects.vercel.app/)) 
 
