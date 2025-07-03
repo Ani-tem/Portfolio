@@ -46,9 +46,12 @@ const HomeSection = ({ onSectionChange }) => {
             >
               VIEW_PROJECTS
             </button>
-            <button className="border-2 border-green-400 text-green-400 px-6 py-3 font-mono font-bold hover:bg-green-400 hover:text-black transition-all transform hover:scale-105">
+
+            <a 
+            href='https://drive.google.com/file/d/1OOFGUNynWoEv4OJBj3sDxFhWs5sMVB9A/view?usp=sharing'
+            className="border-2 border-green-400 text-green-400 px-6 py-3 font-mono font-bold hover:bg-green-400 hover:text-black transition-all transform hover:scale-105">
               DOWNLOAD_CV
-            </button>
+            </a>
           </div>
         </div>
 

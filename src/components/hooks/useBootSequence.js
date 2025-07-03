@@ -8,7 +8,6 @@ export const useBootSequence = (onBootComplete) => {
 
   const bootSequence = [
     'Connecting to database...',
-    'Loading portfolio modules...',
     'SYSTEM READY',
     'Welcome to Anirudh\'s Digital Domain'
   ];
@@ -41,13 +40,13 @@ export const useBootSequence = (onBootComplete) => {
                   memoizedOnBootComplete();
                 }
               }
-            }, 1500);
+            }, 15);
           }
         }
       } else {
         clearInterval(typeInterval);
       }
-    }, 80);
+    }, 20);
 
     return () => {
       isMounted = false;
@@ -58,7 +57,7 @@ export const useBootSequence = (onBootComplete) => {
   useEffect(() => {
     const cursorInterval = setInterval(() => {
       setShowCursor(prev => !prev);
-    }, 600);
+    }, 6);
     
     return () => clearInterval(cursorInterval);
   }, []);

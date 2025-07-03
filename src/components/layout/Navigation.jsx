@@ -23,8 +23,9 @@ const Navigation = ({ currentSection, setCurrentSection }) => {
           <div className="flex items-center space-x-4">
             <div className="flex items-center space-x-2">
               <Terminal className="w-6 h-6 text-green-400 animate-pulse" />
-              <span className={`text-green-400 font-mono font-bold ${glitchActive ? 'animate-pulse' : ''}`}>
+              <span className={`text-green-400 font-mono font-bold ${glitchActive ? 'animate-pulse' : ''}`}>  
                 TEMMANABOYINA.SYS
+
               </span>
             </div>
             <div className="hidden md:flex items-center space-x-4 text-xs font-mono">
