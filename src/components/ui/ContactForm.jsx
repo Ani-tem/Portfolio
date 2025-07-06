@@ -8,14 +8,14 @@ export const ContactForm = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  // Your Google Form URL (converted to formResponse endpoint)
+
   const GOOGLE_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSfqHikULi9VWu8cw8qJISXwriBj90BWi3uZL_9Eq2PMaCIQ-A/formResponse';
   
-  // Google Form field IDs
+
   const FORM_FIELDS = {
-    name: 'entry.346603530',     // Name field
-    email: 'entry.1796117449',   // Email field
-    message: 'entry.854049037'   // Message field
+    name: 'entry.346603530',     
+    email: 'entry.1796117449',   
+    message: 'entry.854049037'   
   };
 
   const handleChange = (e) => {
