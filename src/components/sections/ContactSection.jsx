@@ -24,7 +24,7 @@ export const ContactSection = () => {
     },
     {
       icon: Instagram,
-      text: 'Instagram: @yourusername',
+      text: 'Instagram: anirudh_tvvb ',
       color: 'text-pink-400 border-pink-400 hover:bg-pink-400/10',
       href: 'https://www.instagram.com/anirudh_tvvb/'
     },
