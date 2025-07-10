@@ -48,7 +48,7 @@ const HomeSection = ({ onSectionChange }) => {
             </button>
 
             <a 
-            href=https://drive.google.com/file/d/1uORvGNB_MJMTb5UptCaOk1L2P-nuxAna/view?usp=drive_link
+            href= 'https://drive.google.com/file/d/1uORvGNB_MJMTb5UptCaOk1L2P-nuxAna/view?usp=drive_link'
             className="border-2 border-green-400 text-green-400 px-6 py-3 font-mono font-bold hover:bg-green-400 hover:text-black transition-all transform hover:scale-105">
               DOWNLOAD_CV
             </a>
