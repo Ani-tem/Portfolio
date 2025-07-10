@@ -14,13 +14,19 @@ export const ContactSection = () => {
       icon: Github,
       text: 'github.com/Anirudh',
       color: 'text-green-400 border-green-400 hover:bg-green-400/10',
-      href: 'https://github.com'
+      href: 'https://github.com/Ani-tem'
     },
     {
       icon: Linkedin,
       text: 'Linkedin',
       color: 'text-green-400 border-green-400 hover:bg-green-400/10',
       href: 'https://www.linkedin.com/in/anirudhvvbt/'
+    },
+    {
+      icon: Instagram,
+      text: 'Instagram: @yourusername',
+      color: 'text-pink-400 border-pink-400 hover:bg-pink-400/10',
+      href: 'https://www.instagram.com/anirudh_tvvb/'
     },
     {
       icon: Terminal,
