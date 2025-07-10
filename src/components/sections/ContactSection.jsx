@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, Github, Linkedin, Terminal } from 'lucide-react';
+import { Mail, Github, Linkedin, Terminal, Instagram } from 'lucide-react';
 import { ContactForm } from '../ui/ContactForm';
 
 export const ContactSection = () => {
